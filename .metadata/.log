@@ -1155,3 +1155,174 @@ java.lang.NullPointerException: Cannot invoke "java.net.URI.toString()" because 
 
 !ENTRY org.eclipse.ui 2 2 2021-03-04 10:04:28.028
 !MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:54.463
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:54.470
+!MESSAGE classpath=1 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:54.477
+!MESSAGE buffering callback sts4.classpath.YCwJUXEo cookietest false 1
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:54.482
+!MESSAGE executing callback sts4.classpath.YCwJUXEo 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:54.493
+!MESSAGE executing callback sts4.classpath.YCwJUXEo SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:54.743
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:54.759
+!MESSAGE classpath=93 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:54.769
+!MESSAGE buffering callback sts4.classpath.YCwJUXEo cookietest false 93
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:54.774
+!MESSAGE executing callback sts4.classpath.YCwJUXEo 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:54.785
+!MESSAGE executing callback sts4.classpath.YCwJUXEo SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.084
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.103
+!MESSAGE classpath=95 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.113
+!MESSAGE buffering callback sts4.classpath.YCwJUXEo cookietest false 95
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.122
+!MESSAGE executing callback sts4.classpath.YCwJUXEo 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.145
+!MESSAGE executing callback sts4.classpath.YCwJUXEo SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.262
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.271
+!MESSAGE classpath=95 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.288
+!MESSAGE buffering callback sts4.classpath.YCwJUXEo cookietest false 95
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.295
+!MESSAGE executing callback sts4.classpath.YCwJUXEo 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.309
+!MESSAGE executing callback sts4.classpath.YCwJUXEo SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.435
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.445
+!MESSAGE classpath=94 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.459
+!MESSAGE buffering callback sts4.classpath.YCwJUXEo cookietest false 94
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.467
+!MESSAGE executing callback sts4.classpath.YCwJUXEo 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.477
+!MESSAGE executing callback sts4.classpath.YCwJUXEo SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.598
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.608
+!MESSAGE classpath=93 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.616
+!MESSAGE buffering callback sts4.classpath.YCwJUXEo cookietest false 93
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.621
+!MESSAGE executing callback sts4.classpath.YCwJUXEo 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:55.632
+!MESSAGE executing callback sts4.classpath.YCwJUXEo SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:56.428
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:56.446
+!MESSAGE classpath=93 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:56.457
+!MESSAGE buffering callback sts4.classpath.YCwJUXEo cookietest false 93
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:56.464
+!MESSAGE executing callback sts4.classpath.YCwJUXEo 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:30:56.477
+!MESSAGE executing callback sts4.classpath.YCwJUXEo SUCCESS [done]
+
+!ENTRY org.eclipse.jface 2 0 2021-03-04 11:31:16.781
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-03-04 11:31:16.781
+!MESSAGE A conflict occurred for CTRL+SHIFT+C:
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@79c7c1c0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7953e6d6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:40:19.993
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:40:20.003
+!MESSAGE classpath=68 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:40:20.012
+!MESSAGE buffering callback sts4.classpath.YCwJUXEo cookietest false 68
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:40:20.018
+!MESSAGE executing callback sts4.classpath.YCwJUXEo 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:40:20.041
+!MESSAGE executing callback sts4.classpath.YCwJUXEo SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:42:56.823
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:42:56.831
+!MESSAGE classpath=69 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:42:56.839
+!MESSAGE buffering callback sts4.classpath.YCwJUXEo cookietest false 69
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:42:56.846
+!MESSAGE executing callback sts4.classpath.YCwJUXEo 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:42:56.861
+!MESSAGE executing callback sts4.classpath.YCwJUXEo SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:42:59.016
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:42:59.053
+!MESSAGE classpath=69 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:42:59.060
+!MESSAGE buffering callback sts4.classpath.YCwJUXEo cookietest false 69
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:42:59.065
+!MESSAGE executing callback sts4.classpath.YCwJUXEo 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-03-04 11:42:59.075
+!MESSAGE executing callback sts4.classpath.YCwJUXEo SUCCESS [done]
