@@ -31,11 +31,11 @@ public class TestController {
 	public CommonRespDto<?> save(@RequestBody PostSaveReqDto postSaveDto) { //title, content 
 		
 		//원래는 세션값을 넣어야함
-		User user = new User(1L, "ssar", "1234","ssar@nate.com",LocalDateTime.now());
+		//User user = new User(1L, "ssar", "1234","ssar@nate.com",LocalDateTime.now());
 		
 		Post postEntity = postRepository.save(postSaveDto.toEntity());
 		//내부적으로 실패시 => Exception한다! 1이 리턴이 되지 않음!
-		postEntity.setUser(user);
+		//postEntity.setUser(user);
 		
 		return new CommonRespDto<>(1,"성공",postEntity);
 	}
