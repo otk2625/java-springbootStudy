@@ -8,7 +8,8 @@ server:
       
 spring:
   datasource:
-    url: jdbc:h2:mem:textdb
+    #url: jdbc:h2:mem:textdb
+    url: jdbc:h2:file:~/textdb
     driver-class-name: org.h2.Driver
     username: sa
     password: 

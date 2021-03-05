@@ -37,9 +37,11 @@ public class Post {
 	private String content;
 	
 	//누가 적었는지?
-	@ManyToOne(fetch = FetchType.LAZY) // 연관관계 맺는법. FK의 주인인 곳에서 적어야 함 
+	//가져올 수가 N개라면 기본전략이 EAGER
+	//순방향 매핑
+	@ManyToOne(fetch = FetchType.EAGER) // 연관관계 맺는법. FK의 주인인 곳에서 적어야 함 
 	@JoinColumn(name="userId")
-	@JsonIgnoreProperties({"posts"})
+	//@JsonIgnoreProperties({"posts"})
 	private User user;
 	
 	@CreationTimestamp //값이 들어올때 자동으로 현재 시간이 들어감
