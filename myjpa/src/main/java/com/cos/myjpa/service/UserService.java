@@ -20,7 +20,7 @@ public class UserService {
 	
 	private final UserRepository userRepository;
 	
-
+	@Transactional(readOnly = true)
 	public List<UserRespDto> 전체찾기() {
 		// Post return 하기 싫을경우!
 		// 방법1 - 리스트로 만들어서 for문으로 하나씩 넣기
@@ -38,7 +38,7 @@ public class UserService {
 		
 		return userRespDtos;
 	}
-
+	@Transactional(readOnly = true)
 	public UserRespDto 한건찾기(Long id) {
 		User userEntity = userRepository.findById(id).orElseThrow(() -> {
 			return new IllegalArgumentException("id를 찾을 수 없습니다.");
@@ -48,7 +48,7 @@ public class UserService {
 		
 		return userRespDto;
 	}
-
+	@Transactional(readOnly = true)
 	public User 프로파일(Long id) {
 		User userEntity = userRepository.findById(id).orElseThrow(() -> {
 			return new IllegalArgumentException("id를 찾을 수 없습니다.");
@@ -56,7 +56,7 @@ public class UserService {
 		
 		return userEntity;
 	}
-
+	@Transactional(readOnly = true)
 	public User 로그인(UserLoginReqDto userLoginReqDto) {
 		User userEntity = userRepository
 				.findByUsernameAndPassword(userLoginReqDto.getUsername(), userLoginReqDto.getPassword());

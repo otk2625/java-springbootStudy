@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.cos.myjpa.domain.post.Post;
 import com.cos.myjpa.domain.post.PostRepository;
@@ -22,6 +23,7 @@ public class PostService {
 	private final PostRepository postRepository;
 	private final HttpSession session;
 
+	@Transactional
 	public Post 한건저장(PostSaveReqDto postSaveDto, User principal) {
 		// Post안에 유저정보 집어 넣기
 		Post post = postSaveDto.toEntity();
@@ -34,6 +36,7 @@ public class PostService {
 		return postEntity;
 	}
 
+	@Transactional(readOnly = true) //변경감지 안함, 고립성!!
 	public PostRespDto 한건찾기(Long id) {
 		// Optional get(), orElseGet(), orElseThrow()
 		// 웬만하면 orElseThrow()사용!
@@ -47,11 +50,13 @@ public class PostService {
 		return postRespDto;
 	}
 
+	@Transactional(readOnly = true)
 	public List<Post> 모두찾기() {
 		List<Post> postEntity = postRepository.findAll();
 		return postEntity;
 	}
-
+	
+	@Transactional
 	public Post 한건수정(PostUpdateReqDto postUpdateReqDto, Long id) {
 		// 1. id로 찾기
 		// 영속화! => 영속성 컨텍스트에서 가져오는것
@@ -67,9 +72,11 @@ public class PostService {
 		Post postUpdateEntity = postRepository.save(postEntity); // 더티 체킹을 사용해야 하는데 그러려면 @Service 만들어야 가능!!
 		
 		return postUpdateEntity;
-	}
+	}// 서비스 종료시 영속성 컨텍스트에 영속화 되어있는 모든 객체의 변경을 감지하여 변경된 아이들을 flush한다. (commit) = 더티체킹
 
-	public void 한건삭제(Long id) {
+	@Transactional
+	public void 한건삭제(Long id) { //삭제는 리턴이 없다, 삭제하다가 오류나서 GlobalException으로 처리하면 된다
 		postRepository.deleteById(id);
+		//또는 try-catch로 처리 => 비추천
 	}
 }
