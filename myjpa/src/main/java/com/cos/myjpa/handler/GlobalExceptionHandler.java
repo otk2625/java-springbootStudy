@@ -2,12 +2,15 @@ package com.cos.myjpa.handler;
 
 import java.sql.SQLDataException;
 
+import javax.security.sasl.AuthenticationException;
+
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cos.myjpa.handler.ex.MyAuthenticationException;
 import com.cos.myjpa.web.dto.CommonRespDto;
 
 @RestController //데이터를 리턴할 수 있음
@@ -29,4 +32,12 @@ public class GlobalExceptionHandler {
 	public CommonRespDto<?> emptyResultDataAccess(Exception e){ // e 는 오류난 정보를 다 들고있음!
 		return new CommonRespDto<>(-1, e.getMessage(), null);
 	}
+	
+	@ExceptionHandler(value = MyAuthenticationException.class)
+	public CommonRespDto<?> myAuthenticationException(Exception e){ // e 는 오류난 정보를 다 들고있음!
+		return new CommonRespDto<>(-1, "로그인 후 사용해주세요", null);
+	}
 }
+
+
+

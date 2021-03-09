@@ -3,9 +3,11 @@ package com.cos.myjpa.web.user.dto;
 import com.cos.myjpa.domain.post.Post;
 import com.cos.myjpa.domain.user.User;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class UserJoinReqDto {
 	private String username;
 	private String password;
