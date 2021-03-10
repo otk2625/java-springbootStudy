@@ -38,6 +38,7 @@ public class PostController {
 	private final EntityManager em;
 	private final PostService postService;
 
+	//인증만 필요
 	@PostMapping("/post")
 	public CommonRespDto<?> save(@RequestBody PostSaveReqDto postSaveDto) { //title, content 
 		//원래는 세션값을 넣어야함
@@ -52,16 +53,19 @@ public class PostController {
 		return new CommonRespDto<>(1,"성공",postService.한건저장(postSaveDto, principal));
 	}
 	
+	//인증만 필요
 	@GetMapping("/post/{id}")
 	public CommonRespDto<?> findByID(@PathVariable Long id){
 		return new CommonRespDto<>(1, "성공", postService.한건찾기(id));
 	}
 	
+	//인증만 필요
 	@GetMapping("/post")
 	public CommonRespDto<?> findAll(){
 		return new CommonRespDto<>(1,"성공",postService.모두찾기());
 	}
 	
+	//인증 + 권한 필요
 	@PutMapping("/post/{id}")
 	public CommonRespDto<?> update(@PathVariable Long id, @RequestBody PostUpdateReqDto postUpdateReqDto){
 //		Post p = new Post();
@@ -70,6 +74,7 @@ public class PostController {
 		return new CommonRespDto<>(1,"성공", postService.한건수정(postUpdateReqDto, id));
 	}
 	
+	//인증 + 권한(Authorization) 필요
 	@DeleteMapping("/post/{id}")
 	public CommonRespDto<?> deleteById(@PathVariable Long id){
 		postService.한건삭제(id);
