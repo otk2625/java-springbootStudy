@@ -2,22 +2,47 @@ package com.cos.blog.config.auth;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Map;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import com.cos.blog.domain.user.User;
 
 import lombok.Data;
 
 @Data
-public class PricipalDetails implements UserDetails{
+public class PricipalDetails implements UserDetails, OAuth2User{
 	private User user;
+	private Map<String, Object> attributes; // OAuth제공자로 부터 받은 회원 정보
+	private boolean oauth = false;
 	
 	public PricipalDetails(User user) {
 		this.user = user;
 	}
+	
+	public PricipalDetails(User user, Map<String, Object> attributes) {
+		this.attributes = attributes;
+		this.user = user;
+		this.oauth = true;
+	}
+	
+	
 
+	@Override
+	public Map<String, Object> getAttributes() {
+		// TODO Auto-generated method stub
+		return attributes;
+	}
+
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return "좀따할게";
+	}
+	
 	
 	@Override
 	public String getPassword() {
@@ -59,5 +84,8 @@ public class PricipalDetails implements UserDetails{
 		collectors.add(() ->"ROLE_"+ user.getRole().toString()); //이게 리턴되서 컬렉터에 들어감
 		return collectors;
 	}
+
+
+	
 
 }
