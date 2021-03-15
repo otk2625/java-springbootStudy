@@ -1,5 +1,6 @@
 package com.cos.blog.web;
 
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -34,11 +35,19 @@ public class UserController {
 	}
 	
 	@PutMapping("/user/{id}")
-	public @ResponseBody CommonRespDto<?> update(@PathVariable int id, @RequestBody UserUpdateReqDto userUpdateReqDto) {
+	public @ResponseBody CommonRespDto<?> update(@PathVariable int id, @RequestBody UserUpdateReqDto userUpdateReqDto, @AuthenticationPrincipal PricipalDetails principalDetails) {
 		User userEntity = userService.회원수정(id, userUpdateReqDto);
 		
 		// 세션 변경
 		// UsernamePasswordToken -> Authentication 객체로 만들어서 -> 시큐리티 컨텍스트 홀더에 집어 넣으면 됨
+//		Authentication authentication = 
+//				new UsernamePasswordAuthenticationToken(userEntity.getUsername(), userEntity.getPassword());
+//		SecurityContextHolder.getContext().setAuthentication(authentication);
+		
+		
+		// 세션 변경
+		principalDetails.setUser(userEntity);
+		
 		
 		return new CommonRespDto<>(1, null);
 	}
