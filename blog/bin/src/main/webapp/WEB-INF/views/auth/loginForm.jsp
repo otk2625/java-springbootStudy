@@ -20,11 +20,6 @@
     With Google: <a href="/oauth2/authorization/google">click here</a>
     <br>
     With Facebook: <a href="/oauth2/authorization/facebook">click here</a>
-     <br>
-    With Naver: <a href="/oauth2/authorization/naver">click here</a>
-    <br>
-    <a href="/oauth2/authorization/kakao" class="btn btn-warning active" role="button">카카오 로그인</a>
-
 
 </body>
 </html>
