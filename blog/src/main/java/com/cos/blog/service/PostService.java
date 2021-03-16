@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.cos.blog.domain.post.Post;
 import com.cos.blog.domain.post.PostRepository;
+import com.cos.blog.web.post.dto.PostSaveReqDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -24,5 +25,26 @@ public class PostService {
 	@Transactional
 	public Post 글쓰기(Post post) {
 		return postRepository.save(post);
+	}
+
+	@Transactional(readOnly = true) //고립성, 변경감지 안함을 위함
+	public Post 상세보기(int id) {
+		return postRepository.findById(id).get();
+	}
+
+	@Transactional
+	public void 삭제하기(int id) {
+		postRepository.deleteById(id);
+	}
+	
+	@Transactional
+	public void 수정하기(int id, PostSaveReqDto postSaveReqDto) {
+		
+		Post postEntity = postRepository.findById(id).get(); //1차 캐시
+		
+		postEntity.setTitle(postSaveReqDto.getTitle());
+		postEntity.setContent(postSaveReqDto.getContent());
+		//더티체킹
+
 	}
 }

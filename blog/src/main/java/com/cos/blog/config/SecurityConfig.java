@@ -37,7 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.csrf().disable();
 		
 		http.authorizeRequests()
-		.antMatchers("/user/**","/post/**").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")//ROLE_는 강제성이있음. 롤 검증시
+		.antMatchers("/user/**","/post/**","/reply/**").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")//ROLE_는 강제성이있음. 롤 검증시
 		.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
 		.anyRequest().permitAll()
 		.and()

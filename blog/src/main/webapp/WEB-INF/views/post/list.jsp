@@ -9,13 +9,16 @@
 <c:forEach var = "post" items="${posts.content}">
  <div class="card">
     <div class="card-body">
+    <div class = "d-flex justify-content-between">
       <h4 class="card-title">${post.title}</h4>
+      <div>작성자 : ${post.user.username}</div>
+      </div>
       <a href="/post/${post.id}" class="btn btn-primary">상세보기</a>
     </div>
   </div>
   <br>
 </c:forEach>
-
+<input type="hidden" value="${posts.number}" name="page" />
 <ul class="pagination">
 
 	<c:choose>
@@ -40,5 +43,9 @@
 </ul>
   
 </div>
+<script>
+
+console.log(document.getElementsByName("page")[0].value);
+</script>
 
 <%@ include file = "../layout/footer.jsp" %>
