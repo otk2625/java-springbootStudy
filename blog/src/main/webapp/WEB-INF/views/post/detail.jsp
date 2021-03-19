@@ -5,6 +5,7 @@
 
 
 <div class="container">
+
 	<div>
 		<button class="btn btn-secondary" onClick="history.go(-1)">뒤로가기</button>
 		<c:if test="${post.user.id == principal.user.id }">
@@ -28,12 +29,13 @@
 
 	<!-- 댓글 시작 -->
 	<div class="card">
-		<form>
+		<form action="/reply" method="post">
+		<input type="hidden" value="${post.id}" name="postId"/>
 			<div class="card-body">
-				<textarea id="reply-content" class="form-control" rows="1"></textarea>
+				<textarea name="content" class="form-control" rows="1"></textarea>
 			</div>
 			<div class="card-footer">
-				<button type="button" id="btn-reply-save" class="btn btn-primary">등록</button>
+				<button type="submit" id="btn-reply-save" class="btn btn-primary">등록</button>
 			</div>
 		</form>
 	</div>

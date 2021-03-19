@@ -184,7 +184,7 @@ input {
 				<div class="social-container">
 					<a href="/oauth2/authorization/google" class="social"><i class="fa-2x" ><img src="https://cdn.imgbin.com/3/5/19/imgbin-google-google-account-google-logo-login-mining-in-canada-VTmG131d49E1TfpXjN8vVjBfx.jpg" width="50" height="50"></i></a>
 					<a href="/oauth2/authorization/facebook" class="social"><i class="fa-2x" ><img src="https://w7.pngwing.com/pngs/933/237/png-transparent-computer-icons-facebook-like-button-facebook-blue-trademark-logo.png" width="50" height="50"></i></a>
-					<a href="/oauth2/authorization/naver" class="social"><i class="fa-2x" ><img src="https://lh3.googleusercontent.com/proxy/fj-uXcRo5Et4kZcctb0lG2M-zN1eTUrcq0Fk-wepRJ3mwCVQfok-GfB-xB3gGohCOwxk6fExcS_ytMceInYrjMm0IPl_mokUKNOL9F7rFMGO7gbgozt0cOH_TW0j-mH8h8-WPgkBC6gy2h5a4zJIhHIX-NGodKP8s-4SJuzl2Ngey-hiC1LW8cN3XOkMVf6ceBL3lukx8aAOrPUfJUTP9xcxei2j9SAs27Q" width="50" height="50"></i></a>
+					<a href="/oauth2/authorization/naver" class="social"><i class="fa-2x" ><img src="https://phinf.pstatic.net/contact/78/2015/7/15/naveridlogin_1436952514384.png" width="50" height="50"></i></a>
 					<a href="/oauth2/authorization/kakao" class="social"><i class="fa-2x" ><img src="https://blog.kakaocdn.net/dn/Sq4OD/btqzlkr13eD/dYwFnscXEA6YIOHckdPDDk/img.jpg" width="50" height="50"></i></a>
 				</div>
 				<span>또는 회원 계정으로 로그인</span>

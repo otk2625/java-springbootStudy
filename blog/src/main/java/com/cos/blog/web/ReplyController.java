@@ -19,10 +19,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cos.blog.config.auth.PricipalDetails;
 import com.cos.blog.domain.post.Post;
+import com.cos.blog.domain.reply.Reply;
 import com.cos.blog.service.PostService;
 import com.cos.blog.service.ReplyService;
 import com.cos.blog.web.dto.CommonRespDto;
 import com.cos.blog.web.post.dto.PostSaveReqDto;
+import com.cos.blog.web.reply.dto.ReplySaveDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -31,8 +33,27 @@ import lombok.RequiredArgsConstructor;
 public class ReplyController {
 	
 	private final ReplyService replyService;
+	private final PostService postService;
 	
-	
+	@PostMapping("/reply")
+	public String save(int postId, String content, @AuthenticationPrincipal PricipalDetails pricipalDetails) {
+		Post postEntity = postService.상세보기(postId);
+		
+		ReplySaveDto replySaveDto = new ReplySaveDto(content, pricipalDetails.getUser(), postEntity);
+		
+		if(pricipalDetails.getUser() == null) {
+			return "/loginForm";
+		}
+		
+		// 영속화된 엔티티	
+		Reply replyEntity =  replyService.댓글쓰기(replySaveDto.toEntity());
+		if(replyEntity == null) {
+			return "/post/"+postId;
+		}else {
+			return "redirect:/post/"+postId;
+		}
+		
+	}
 	
 	@DeleteMapping("/reply/{id}")
 	public @ResponseBody CommonRespDto<?> delete(@PathVariable int id, @AuthenticationPrincipal PricipalDetails pricipalDetails) {

@@ -34,6 +34,13 @@ public class ReplyService {
 		
 		
 	}
+
+
+	@Transactional
+	public Reply 댓글쓰기(Reply entity) {
+		return replyRepository.save(entity);
+		
+	}
 	
 	
 }
