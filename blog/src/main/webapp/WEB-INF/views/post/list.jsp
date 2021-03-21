@@ -18,10 +18,37 @@
   </div>
   <br>
 </c:forEach>
-<input type="hidden" value="${posts.number}" name="page" />
-<ul class="pagination">
 
+<input type="hidden" value="${posts.number}" name="page" />
+
+<ul class="pagination">
 	<c:choose>
+		<c:when test="${mode eq 'search'}">
+			<!-- 여기가 검색모드일 때 -->
+			<c:choose>
+		<c:when test="${posts.first}">
+			<li class="page-item disable"><a class="page-link">Previous</a></li>
+		</c:when>
+		<c:otherwise>
+			<li class="page-item"><a class="page-link" href="?searchname=${searchname}&page=${posts.number + -1}">Previous</a></li>
+		</c:otherwise>
+	</c:choose>
+	<c:choose>
+		<c:when test="${posts.last}">
+		<li class="page-item disable" ><a class="page-link">Next</a></li>
+		</c:when>
+		<c:otherwise>
+		<li class="page-item "><a class="page-link" href="?searchname=${searchname}&page=${posts.number + 1}">Next</a></li>
+		</c:otherwise>
+	</c:choose>
+		</c:when>
+		
+		
+		
+		
+		<c:otherwise>
+			<!-- 여기가 검색모드가 아닐 때 -->
+			<c:choose>
 		<c:when test="${posts.first}">
 			<li class="page-item disable"><a class="page-link">Previous</a></li>
 		</c:when>
@@ -37,6 +64,10 @@
 		<li class="page-item "><a class="page-link" href="?page=${posts.number + 1}">Next</a></li>
 		</c:otherwise>
 	</c:choose>
+		</c:otherwise>
+	</c:choose>
+
+	
 
 
 

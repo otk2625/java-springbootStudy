@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cos.blog.config.auth.PricipalDetails;
@@ -51,6 +52,20 @@ public class PostController {
 		model.addAttribute("post",postEntity);
 		
 		return "/post/detail"; //ViewResolver가 .jsp파일을 찾아줌
+	}
+	
+	
+	@GetMapping("/post/search")
+	public String searchByTitle(Model model ,@RequestParam(value = "searchname") String title, @PageableDefault(sort = "id", direction = Sort.Direction.DESC, size = 5) Pageable pageable) {
+		System.out.println("제목 넘어와짐? : " + title);
+		Page<Post> posts = postService.검색(title, pageable);
+		
+		
+		model.addAttribute("posts",posts);
+		model.addAttribute("mode", "search");
+		model.addAttribute("searchname", title);
+		
+		return "post/list"; //ViewResolver가 .jsp파일을 찾아줌
 	}
 	
 	

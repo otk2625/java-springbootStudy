@@ -39,7 +39,7 @@
 
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
 		<!-- Brand -->
-		<a class="navbar-brand" href="#">Blog</a>
+		<a class="navbar-brand" href="/">Blog</a>
 
 		<!-- Toggler/collapsibe Button -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -69,5 +69,9 @@
 				</div>
 			</c:otherwise>
 		</c:choose>
+		<form class="form-inline" action="/post/search" method="get">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search" name="searchname">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
 	</nav>
 	<br />

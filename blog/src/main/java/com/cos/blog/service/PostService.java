@@ -47,4 +47,10 @@ public class PostService {
 		//더티체킹
 
 	}
+
+	@Transactional
+	public Page<Post> 검색(String title, Pageable pageable) {
+		
+		return postRepository.findByTitleContaining(title, pageable);
+	}
 }
